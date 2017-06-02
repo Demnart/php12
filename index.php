@@ -18,10 +18,3 @@ class Article{
 
 }
 
-$res = new Article('Любовь','Не');
-$res->view();
-echo '<br>';
-$news = new Article('Сон','Работа');
-$news->view();
-
-
