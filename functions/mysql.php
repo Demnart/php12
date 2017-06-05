@@ -23,13 +23,14 @@ class Mysql
     public function insertIntoDB($sql)
     {
         $resource = $this->connectToDB();
-        mysqli_set_charset($resource,"utf-8");
+        mysqli_set_charset($resource,"utf8");
         mysqli_connect($resource,$sql);
     }
     public function getDataFromDB($sql)
     {
         $data =[];
         $resource = $this->connectToDB();
+        mysqli_set_charset($resource,"utf8");
         $result = mysqli_query($resource,$sql);
 
         while (NULL !== $row = mysqli_fetch_assoc($result))
