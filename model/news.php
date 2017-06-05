@@ -9,11 +9,13 @@ class News extends Article
         $sql = "SELECT * FROM news";
         return $resource->getDataFromDB($sql);
     }
-//
-//    public  function addNewsToDB()
-//    {
-//
-//    }
+
+    public  function addNewsToDB($data)
+    {
+        $sql ="INSERT INTO news(title,text,author) VALUES ('".$data['title']."','".$data['text']."','".$data['author']."')";
+        $resource = new Mysql();
+        $resource->insertIntoDB($sql);
+    }
 //
 //    public function getOneNews()
 //    {
