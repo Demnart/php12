@@ -1,11 +1,12 @@
 <?php
 
-class AbstractNews
+abstract class Article
 {
 
-    abstract function getAllNews();
-    abstract function addNewsToDB();
-    abstract function getOneNews();
-    abstract function updateNews();
+      abstract function getAllNews();
+//    abstract function addNewsToDB();
+//    abstract function getOneNews();
+//    abstract function updateNews();
 
 }
+
