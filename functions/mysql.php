@@ -24,7 +24,7 @@ class Mysql
     {
         $resource = $this->connectToDB();
         mysqli_set_charset($resource,"utf8");
-        mysqli_connect($resource,$sql);
+        mysqli_query($resource,$sql);
     }
     public function getDataFromDB($sql)
     {
